@@ -123,4 +123,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 from mongoengine import connect
-connect('', host = 'localhost', port = 27017)
+connect('SHG', host = 'localhost', port = 27017)
