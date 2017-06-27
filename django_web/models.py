@@ -16,6 +16,11 @@ class ArticleInfo(Document):
 for i in ArticleInfo.objects[:4]: # equal to limit(1)
     print(i.title, i.des, i.score, i.tags)
 
+print("################################")
 iter = 'sdfjowejqwjrkwj;efkjdskjf;sj'
 paginator = Paginator(iter, 4) # can only display 4 items per page
-print(paginator.page(1))
+page1 = paginator.page(1)
+page2 = paginator.page(2)
+print(page1.object_list)
+print(page2.object_list)
+print(page2.paginator.num_pages)
