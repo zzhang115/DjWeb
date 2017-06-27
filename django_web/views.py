@@ -6,7 +6,7 @@ def index(request):
     context = {
         'title' : articleInfo[0].title,
         'des' : articleInfo[0].des,
-        'score' : articleInfo[0].score,
-        'tags' : articleInfo[0].tags
+        'score' : articleInfo[0].score
+        # 'tags' : articleInfo[0].tags
     }
     return render(request, 'index.html', context)
