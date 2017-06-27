@@ -18,15 +18,15 @@
             <li>
                 <img src="{% static 'images/0001.jpg' %}" width="100" height="91">
                 <div class="article-info">
-                    <h3><a href="#">The blah</a></h3>
+                    <h3><a href="#">{{ title }}</a></h3>
                     <p class="meta-info">
                         <span class="meta-cate">fun</span>
                         <span class="meta-cate">Wow</span>
                     </p>
-                    <p class="description">Just say something.</p>
+                    <p class="description">{{ des }}</p>
                 </div>
                 <div class="rate">
-                    <span class="rate-score">4.5</span>
+                    <span class="rate-score">{{ score }}</span>
                 </div>
             </li>
             <li>
