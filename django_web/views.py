@@ -4,11 +4,16 @@ from django.core.paginator import Paginator
 # Create your views here.
 def index(request):
     limit = 2
-    articleInfo = ArticleInfo.objects[:4]
+    articleInfo = ArticleInfo.objects[:4] #this number 4 seems useless
     paginator = Paginator(articleInfo, limit)
-    page = request.GET.get('page', 2)
+    page = request.GET.get('page', 1) #page number
+    print('page:',page)
     loadedPage = paginator.page(page)
-
+    loadedPage.has_previous()
+    # loadedPage.has_next()
+    # loadedPage.number
+    # print(loadedPage.paginator.num_pages)
+    # loadedPage.pre
     context = {
         'ArticleInfo' : loadedPage
         # 'title' : articleInfo[0].title,

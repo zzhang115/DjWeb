@@ -33,6 +33,15 @@
                 </li>
             {% endfor %}
         </ul>
+        <div>
+            {% if ArticleInfo.has_previous %}
+                <a href="?page={{ ArticleInfo.previous_page_number}}">Pre</a>
+            {% endif %}
+                <span>{{ ArticleInfo.number }} of {{ ArticleInfo.paginator.num_pages }}</span>
+            {% if ArticleInfo.has_next %}
+                <a href="?page={{ ArticleInfo.next_page_number }}">Next</a>
+            {% endif %}
+        </div>
     </div>
     <div class="footer">
         <p>&copy; Mugglecoding</p>
